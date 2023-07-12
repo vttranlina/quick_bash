@@ -14,5 +14,9 @@ else
     DURATION=$1
 fi
 
-echo "Try to dump in $DURATION seconds. Output file: /tmp/flame_graph_$FILE_NAME_SUFFIX.html"
-./profiler.sh -d $DURATION -f /tmp/flame_graph_$FILE_NAME_SUFFIX.html -e itimer 1
+echo "Try to dump CPU in $DURATION seconds. Output file: /tmp/flame_graph_CPU_$FILE_NAME_SUFFIX.html"
+./profiler.sh -d $DURATION -f /tmp/flame_graph_CPU_$FILE_NAME_SUFFIX.html -e itimer 1
+
+
+echo "Try to dump MEMORY in $DURATION seconds. Output file: /tmp/flame_graph_MEMORY_$FILE_NAME_SUFFIX.html"
+./profiler.sh -d $DURATION -f /tmp/flame_graph_MEMORY_$FILE_NAME_SUFFIX.html -e itimer 1

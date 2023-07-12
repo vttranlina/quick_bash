@@ -19,4 +19,4 @@ echo "Try to dump CPU in $DURATION seconds. Output file: /tmp/flame_graph_CPU_$F
 
 
 echo "Try to dump MEMORY in $DURATION seconds. Output file: /tmp/flame_graph_MEMORY_$FILE_NAME_SUFFIX.html"
-./profiler.sh -d $DURATION -f /tmp/flame_graph_MEMORY_$FILE_NAME_SUFFIX.html -e itimer 1
+./profiler.sh -d $DURATION -f /tmp/flame_graph_MEMORY_$FILE_NAME_SUFFIX.html --alloc 500k 1
